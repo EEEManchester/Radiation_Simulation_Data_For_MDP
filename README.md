@@ -1,0 +1,10 @@
+# Radiation_Simulation_Data_For_MDPI 
+
+File: Sellafield_radiation_obersations_wHeader.csv
+ Robot was manually driven around the simulation environment, with the radiation field intensity changing due to sources and shielding materials. File contains comma separated values of radiation intensity (header = “field.value”), based on robot position and orientation. X and Y values used to locate the observations are from fields named “field.pose.position.x” and “field.pose.position.y” respectively. Values recorded directly from ROS messages during run time.
+ 
+ File: MCNP_attenuation_data_wHeader.csv
+ Relative intensity of gamma rays based on a monoenergetic point Cs-137 source, and various materials placed in the beam path. This arrangement is identical to the dataset “Gazebo_attenuation_data_wHeader.csv”. Distance from the isotropic source is given by column header “Distance(cm)”, with units of cm as indicated in header name.  Each subsequent column contains the relative intensity as a function of distance for different attenuating materials. The thickness and type of material is given in the header name e.g. “Water(5cm)”. For positions where the attenuating object would be located, the value is recorded as NA. For distances <30, no additional material was introduced, therefore equivalent to the unattenuated case.
+ 
+ File: Gazebo_attenuation_data_wHeader.csv
+ Relative intensity of gamma rays based on a monoenergetic point Cs-137 source, and various materials placed in the beam path. This arrangement is identical to the dataset “MCNP_attenuation_data_wHeader.csv”. Distance from the isotropic source is given by column header “Distance(cm)”, with units of cm as indicated in header name.  Each subsequent column contains the relative intensity as a function of distance for different attenuating materials. The thickness and type of material is given in the header name e.g. “Water(5cm)”. As the unattenuated value is identical before any attenuating medium, for position values less than the downstream side of the attenuating object is recorded as NA.
